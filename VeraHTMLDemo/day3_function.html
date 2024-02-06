@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //define a function
+        //function: is part of code to excute some certain thing, but it would only
+        //execute when you call the function
+        function hello(){
+            // document.write(1122);
+            //show a dialog
+            // alert(1122);
+            //1.find the input box in js code as an object,save it in a variable
+            var box = document.getElementById("i1");
+            //2.get the text of input box,save it in a variable
+            var year = box.value;
+            // alert(year);
+            //3.analyze it, see if it's leap year
+            if(year%400==0 || (year%4==0 && year%100!=0) ){
+                alert(year+" is leap year");
+            }else{
+                alert(year+" is not a leap year");
+            }
+        }
+    </script>
+</head>
+<body>
+    value is to set up the text of input<br>
+    when you write value="hello"<br>
+    then you will hello stay inside of input box in the begining<br>
+    <input id="i1" style="color:red"/>
+    <button onclick="hello()">click me to check year</button>
+
+
+</body>
+</html>

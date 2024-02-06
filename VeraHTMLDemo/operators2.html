@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // single line comment
+        //   /* content */
+        var x = 10;
+        //x = x + 10; // = :assign a value from the right side to left side
+        x += 10;      // x = x+10;  //20  
+        x -= 2;       // x = x-2;   //18
+        x *= 5;       // x = x*5;   //90
+        x /= 2;       // x = x/2;   //45
+        document.write(x+"<br>");
+
+
+        var year = 2000;    //if it's a leap year
+        //leap year:
+        //1. it's divisible by 400                                      --A
+        //2. it's divisible by 4, but not divisible by 100              --B
+        //              B1    and     B2
+        if(year%400==0 || (year%4==0 && year%100!=0) ){
+            document.write(year+" is leap year");
+        }else{
+            document.write(year+" is not a leap year");
+        }
+
+
+
+        
+    </script>
+</head>
+<body>
+    <input placeholder="please enter a year"/>
+    <button>check</button>
+</body>
+</html>

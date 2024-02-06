@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        document.write("math operators: <br>");
+        document.write(3+5+"<br>");
+        document.write(10%3+"<br>"); //to get reminder
+        
+
+        document.write("relationship/comparison operators: <br>");
+        document.write(3<2+"<br>");
+
+        //&&: and, two expression of and are both true, then the finally result is true
+       
+        document.write("logical operators: <br>");
+        document.write(true && true);           //true
+        document.write("<br>");
+        document.write(true && false);          //false
+        document.write("<br>");
+        document.write(false && true);          //false
+        document.write("<br>");
+        document.write(false && false);         //false
+        document.write("<br>");
+        
+        //||: or, if any of expressions is true, then the finall result is true
+        document.write(true || true);           //true
+        document.write("<br>");
+        document.write(true || false);          //true
+        document.write("<br>");
+        document.write(false || true);          //true
+        document.write("<br>");
+        document.write(false || false);         //false
+        document.write("<br>");
+        
+        //! : not, !true -> false  !false ->true
+        document.write(!true);         //false
+        document.write("<br>");
+        document.write(!false);         //true
+        document.write("<br>");
+        
+        // document.write((3<2 && 8>5)+"<br>");    //false
+        //difine a variable:year
+        //see if this year is leap year or not
+        //leap year: it's divisible by 400          (A)
+        //              or 
+        //divisible by 4       but        not divisible by 100 (B)
+        //    B1               and                  B2 
+        var year = 1000;   
+        //    A                     B 
+        if(year%400==0 || (year%4==0 &&  year%100!=0)){
+            document.write("<h1 style='color:red'>it's a leap year</h1>");
+        }else{
+            document.write("<h1 style='color:blue'>it's not a leap year</h1>");
+        }
+        // 2000     2024     1000
+        // true     true     false   
+
+    </script>
+</head>
+<body>
+    <br><br><br><br><br><br><br><br><br>
+</body>
+</html>
