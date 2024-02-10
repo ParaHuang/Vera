@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+        0~29:F
+        30~49:E
+        50~59:D
+        60~79:C
+        80~89:B
+        90~100:A
+        */
+       //need a function, to convert percentage into grade, and show grade with dialog
+        function showGrade(){
+            // var percentage = the text you entered in input box;
+            var box = document.getElementById("box");
+            var percentage = box.value;
+            // alert(percentage)
+            // var percentage = 76;//0~100
+            if(0<=percentage && percentage<=29){
+                alert("F")
+            }else if(30<=percentage && percentage<=49){
+                alert("E");
+            }else if(50<=percentage && percentage<=59) {
+                alert("D");
+            }else if(60<=percentage && percentage<=79) {
+                alert("C");
+            }else if(80<=percentage && percentage<=89) {
+                alert("B");
+            }else {
+                alert("A");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="box" placeholder="please enter your percentage"/><br>
+    <button onclick="showGrade()">show the grade</button>
+</body>
+</html>
