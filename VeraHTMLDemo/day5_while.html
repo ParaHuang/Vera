@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function printHello(){
+            //endless loop: because 1<2 is true forever
+            // while(1<2){
+            //     console.log("hello");
+            // }
+            var i=1;    
+            while(i<=5){                // true           true        true        true        true      fase
+                console.log("hello"+i); //1st time        2nd time    3rd time    4th time    5th time
+                i+=1;   //i=i+1         //i->2            3           4           5           6
+            }
+            
+
+            // var a = 5;
+            // a+=6;   //a = a+6;
+            // console.log(a)
+        }
+
+        function count(){
+            var i=1;    
+            while(i<=100){               
+                console.log(i);
+                i+=1; //increment 
+            }
+        }
+
+        function countEven(){
+            //make comment to code is a way to explain your code,comment doesn't affect your code at all
+            //single line comment
+            /*
+            multiple lime comment
+            line1
+            line2
+            */
+            /*
+            //first way
+            var i=1;
+            while(i<=100){
+                //we need to control this sentence to only execute when i is even
+                if(i%2==0){//i is even
+                    console.log(i);
+                }
+                i+=1;
+            }
+            */
+
+            var i=2;
+            while(i<=100){
+                console.log(i);
+                i+=2;//2-4-6-8-10-12....-96-98-100
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="printHello()">click me for once, print hello 5 times</button><br>
+    <button onclick="count()">click me to count from 1 to 100</button><br>
+    <button onclick="countEven()">click me to count every even number from 1 to 100</button><br>
+</body>
+</html>
