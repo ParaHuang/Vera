@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        every time you click the button,<br>
+        it will generate a number in the range from 1to 100<br>
+        you will start to guess this number by enter a number<br>
+        compare the number you entered with the number it generated<br>
+        if your entered number is too big, then show a dialog as "too big"<br>
+        if your entered number is too small, then show a dialog as "too small"<br>
+        if your entered number equals as the generated number, then show a dialog as "you guessed right"<br>
+        keep guessing until you got it correct <br>
+    </h1>
+
+    <!-- generated:56
+    guess:
+    39--too small
+    80--too big
+    60--too big
+    54--too small
+    56--you guessed right -->
+
+    <button onclick="startGame()">start the game</button>
+    <script type="text/javascript">
+        function startGame(){
+            var generated = 56;
+            // for(;;){
+            while(true){
+                var entered = prompt("enter a number:");
+                //the entered is less than generated number
+                if(entered < generated){
+                    alert("too small");
+                }else if(entered > generated){
+                    alert("too big");
+                }else{
+                    alert("you guessed right");
+                    break;  //interrupt the outside loop 
+                }
+            }
+        }
+    </script>
+</body>
+</html>
