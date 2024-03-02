@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* #d1{
+            width: 200px;
+            height: 200px;
+            background: red;
+        } */
+
+        /*move your mouse on this div, change background to blue*/
+        /* #d1:hover{
+            background: blue;
+        } */
+    </style>
+    
+</head>
+<body>
+    <div id="d1" onmouseenter="enterDiv()" onmouseleave="leaveDiv()" 
+    style="width: 200px;height: 200px;background: cyan;"></div>
+    <script type="text/javascript">
+        var d1 = document.getElementById("d1");
+        function enterDiv() {
+            //operator css by js
+            //1.changing background
+            d1.style.background = "yellow";
+            //2.make it bigger (300*300)
+            d1.style.width = "300px";
+            d1.style.height = "300px";
+        }
+
+        function leaveDiv(){
+            d1.style.background = "cyan";
+            d1.style.width = "200px";
+            d1.style.height = "200px";
+        }
+    </script>
+</body>
+</html>

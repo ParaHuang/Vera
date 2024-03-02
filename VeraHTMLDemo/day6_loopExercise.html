@@ -27,8 +27,21 @@
 
     <button onclick="startGame()">start the game</button>
     <script type="text/javascript">
+        // var num = Math.random();        //0~1
+        //0.478888 * 100 = 47.88888
+        //0.00001111->0.001111 - 0.001111 = 0
+        //0.998877->99.8877 - 0.8877 = 99
+        /*
+        var originalNumber = Math.random();
+        var remainder = originalNumber*100%1;            
+        console.log(originalNumber,remainder);
+        var num = originalNumber*100-remainder + 1;      //1 to 100
+        console.log(num);
+        */
+        var num = parseInt(Math.random()*100)+1;
+        console.log(num);
         function startGame(){
-            var generated = 56;
+            var generated = parseInt(Math.random()*100)+1;
             // for(;;){
             while(true){
                 var entered = prompt("enter a number:");
