@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input id="num" onkeydown="return check()"/>
+<!-- in js, return false will stop default behavior -->
+<body>
+    <script type="text/javascript">
+        function check(){
+            console.log(event.keyCode)  //0~9 -> 48~58
+            //make delete available
+            if(event.keyCode<48 || event.keyCode>58){//when it's not number
+                return false;   //the result of this method
+            }
+        }
+
+
+    </script>
+</body>
+</html>

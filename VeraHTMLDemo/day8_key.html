@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- account：admin    password：123 ->login successfully
+    otherwise-> invalid account or password -->
+    <center>
+        <input id="account" placeholder="please enter account"/><br>
+        <input id="password" placeholder="please enter password" 
+            onkeypress="a()" onkeydown="b()" onkeyup="c()"/><br>
+        <button onclick="check()">Login</button>
+    </center>
+    <script type="text/javascript">
+        function a(){
+            console.log("onkeypress")//only be called when you typed a character key
+        }
+
+        function b(){
+            //event:hidden argument, anything related to this on key down thing, 
+            // the details would be saved in this event object 
+            console.log("onkeydown" + event.keyCode)//it works for every key when you press it
+            if(event.keyCode == 13) {
+                check();
+            }
+        }
+        function c(){
+            console.log("onkeyup")//it works for every key when you let it go
+        }
+
+
+        //define a method, use it to check that account and password are both correct
+        function check(){
+            //1.get the text inside of the box
+            var account = document.getElementById("account").value;
+            var password = document.getElementById("password").value;
+            //2.check two text are both correct
+            if(account=="admin" && password=="123"){
+                alert("login successfully")
+            }else{
+                alert("invalid account or password");
+            }
+        }
+    </script>
+</body>
+</html>
