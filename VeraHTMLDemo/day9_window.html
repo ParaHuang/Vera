@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num1"/><br>
+    <input id="num2"/><br>
+    <button onclick="add()">add two number</button>
+
+    <script type="text/javascript">
+        function add(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            console.log(typeof num1, typeof num2)//string string
+            // var x1 = parseInt(num1);
+            // var x2 = parseInt(num2);
+            var x1 = parseFloat(num1);
+            var x2 = parseFloat(num2);
+            var result = x1+x2;
+            console.log(num1,"+",num2,"=",result);
+        }
+        //    /*window.*/alert("infomation shows in dialog");
+        // var result = confirm("choose");
+        // console.log(result)
+        // var result = prompt("enter...");
+        // console.log(result);
+
+        var num1 = parseInt(3.14);   //decimal number -> integer number
+        console.log(num1);
+        var str = "10";
+        var num2 = parseInt(str);   //string -> integer number
+        console.log(str,num2,typeof str, typeof num2);
+        var num3 = parseFloat("3.14");
+        console.log(num3, typeof num3);
+
+    </script>
+</body>
+</html>
