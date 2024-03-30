@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="startPrint()">print hello forever</button>
+    <button onclick="startCount()">start to count</button>
+    <button onclick="stopCount()">stop counting</button>
+    <div id="num" style="font-size: 34px;color: aqua;">1</div>
+    
+    <script type="text/javascript">
+        var i = 2;
+        function count(){
+            //find that div, then change the text of it
+            document.getElementById("num").innerText = i;
+            //console.log(i);
+            i++;    //i+=1; //i=i+1;   //->2
+        }
+
+        var x = null;  //null means no value
+        function startCount(){
+            if(x == null){
+                x = setInterval(count,1000);
+            }
+        }
+
+        function stopCount(){
+            clearInterval(x);// remove the interval you set before
+            x = null;
+        }
+
+        function printHello(){
+            console.log("hello");
+        }
+
+        function startPrint(){
+            //console.log("hello");
+            //set up a periodic thing, to exeucte a function for every 2 second
+            setInterval(printHello,2000);
+        }
+    </script>
+</body>
+</html>
