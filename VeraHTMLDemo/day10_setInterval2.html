@@ -12,6 +12,9 @@
         function changePic(){
             document.getElementById("pic").src = "img/"+i+".png";
             i++;
+            if( i == 5){ 
+                i = 1;
+            }
         }
 
         // changePic();

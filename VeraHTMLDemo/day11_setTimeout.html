@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openNewPage()">open a new page after 3 seconds</button>
+
+    <script type="text/javascript">
+        function openPage(){
+            open("day11_setInterval.html","","width=500,height=600,top=300,left=300");
+        }
+
+        function openNewPage(){
+            setTimeout(openPage,3000);
+        }
+    </script>
+</body>
+</html>
