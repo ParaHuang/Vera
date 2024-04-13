@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="reloadPage()">click this button to reload this page by defining a method</button>
+    <button onclick="location.reload()">click this button to reload this page just using the code directly</button>
+    <button onclick="show()">show a dialog</button>
+    <button onclick="alert(456)">show a dialog</button>
+    <button onclick="jump()">click this button to jump into a new page</button>
+    <br>
+    <button onclick="history.back()">go back to last page</button>
+    <button onclick="history.forward()">go forward to next page</button>
+    <button onclick="history.go(-1)">go to -1 page == go back 1 page</button>
+    <button onclick="history.go(1)">go to +1 page == go forward 1 page</button>
+    <script type="text/javascript">
+        console.log(1);
+        console.log(2);
+        console.log(3);
+
+        function reloadPage(){
+            location.reload();
+        }
+
+        function show(){
+            alert(123)
+        }
+
+        function jump(){
+            location.href="http://www.baidu.com";
+        }
+
+    </script>
+</body>
+</html>

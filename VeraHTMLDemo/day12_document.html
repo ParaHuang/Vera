@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="box"/>
+    <button onclick="show()">click this button to show what we entered</button>
+    <script>
+        function show(){
+            //1.get the box
+            var box = document.getElementById("box");
+            //2.get the value of that box
+            var v = box.value;  //.  : of
+            //show it
+            alert(v);
+        }
+    </script>
+
+</body>
+</html>
