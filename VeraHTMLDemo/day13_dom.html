@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img />  label/tag(html)  , node(js) -->
+    <div id="d1" style="color:red;font-size: 34px;">orginal content</div>
+    <button onclick="fun1()">change the content of div above</button>
+    <button onclick="fun2()">change the font color of div above</button>
+    <button onclick="fun3()">change the background color of div above</button>
+    <br>
+    <ul>
+        <li class="fruit">apple</li>
+        <li class="fruit">banana</li>
+        <li class="fruit">strawberry</li>
+        <li class="fruit">orange</li>
+        <li class="fruit">lemon</li>
+        <li class="fruit">grapes</li>
+    </ul>
+    <ol>
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+        <li>Sunday</li>
+    </ol>
+    <button onclick="fun4()">change the color of all li</button>
+    <button onclick="fun5()">change the background of all fruit</button>
+    
+    <script>
+        var node = document.getElementById("d1");
+        function fun1(){
+            node.innerText = "new Content";
+        }
+
+        function fun2(){
+            node.style.color = "green";
+        }
+
+        function fun3(){
+            node.style.background = "cyan";
+        }
+
+        function fun4(){
+            var nodes = document.getElementsByTagName("li");//get all li as node
+            // nodes[0].innerText="苹果";
+            // nodes[1].style.color = "yellow";
+            // nodes[2].style.background = "pink";
+            // for loop
+            for(var i=0 ; i<nodes.length ; i++){//check every li one by one
+                nodes[i].style.color = "pink";  //make them into pink one by one
+            }
+
+
+            // nodes[0].style.color = "pink";
+            // nodes[1].style.color = "pink";
+            // nodes[2].style.color = "pink";
+            // nodes[3].style.color = "pink";
+            // nodes[4].style.color = "pink";
+            // nodes[5].style.color = "pink";
+            // nodes[6].style.color = "pink";
+            // nodes[7].style.color = "pink";
+        }
+
+        function fun5(){
+            var nodes = document.getElementsByClassName("fruit");
+            for(var i = 0 ; i<nodes.length ; i++){
+                nodes[i].style.background = "gray";
+            }
+        }
+    </script>
+</body>
+</html>
