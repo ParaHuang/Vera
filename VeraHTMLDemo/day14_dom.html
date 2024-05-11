@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input style="width:200px" id="name" placeholder="enter the name of new fruit" onkeydown="fun2()"/>
+    <input style="width:200px" id="color" placeholder="enter the color of new fruit" onkeydown="fun3()"/>
+    <input style="width:200px" id="index" placeholder="enter where you want to insert"/><br>
+    
+    <button onclick="fun1()">add a new fruit</button>
+    <button onclick="fun4()">insert a new fruit</button>
+    <ul id="fruits">
+        <li>apple</li>
+        <li>banana</li>
+        <li>blueberry</li>
+        <li>grapes</li>
+    </ul>
+
+    <script type="text/javascript">
+        function fun2(){
+            if(event.keyCode==13){
+                document.getElementById("color").focus();
+            }
+        }
+        function fun3(){
+            if(event.keyCode==13){
+                fun1();
+            }
+        }
+        function fun1(){
+            var name = document.getElementById("name").value;
+            var color = document.getElementById("color").value;
+
+            var node = document.createElement("li");
+            node.innerText = name;
+            node.style.color = color;
+            
+            var parentNode = document.getElementById("fruits");
+            parentNode.appendChild(node);
+        }
+
+        function fun4(){
+            var name = document.getElementById("name").value;
+            var color = document.getElementById("color").value;
+            var index = document.getElementById("index").value;
+
+            var node = document.createElement("li");
+            node.innerText = name;
+            node.style.color = color;
+
+            var parentNode = document.getElementById("fruits");
+            var nodes = document.getElementsByTagName("li");
+            
+            parentNode.insertBefore(node, nodes[index-1]);
+
+        }
+    </script>
+</body>
+</html>

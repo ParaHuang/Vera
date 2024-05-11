@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- <img />  label/tag(html)  , node(js) -->
-    <div id="d1" style="color:red;font-size: 34px;">orginal content</div>
+    <div class="cls" id="d1" style="color:red;font-size: 34px;">orginal content</div>
     <button onclick="fun1()">change the content of div above</button>
     <button onclick="fun2()">change the font color of div above</button>
     <button onclick="fun3()">change the background color of div above</button>
@@ -15,22 +15,23 @@
     <ul>
         <li class="fruit">apple</li>
         <li class="fruit">banana</li>
-        <li class="fruit">strawberry</li>
+        <li class="fruit cls">strawberry</li>
         <li class="fruit">orange</li>
-        <li class="fruit">lemon</li>
+        <li class="fruit cls">lemon</li>
         <li class="fruit">grapes</li>
     </ul>
     <ol>
         <li>Monday</li>
         <li>Tuesday</li>
-        <li>Wednesday</li>
+        <li class="cls">Wednesday</li>
         <li>Thursday</li>
         <li>Friday</li>
         <li>Saturday</li>
-        <li>Sunday</li>
+        <li class="cls">Sunday</li>
     </ol>
     <button onclick="fun4()">change the color of all li</button>
     <button onclick="fun5()">change the background of all fruit</button>
+    <button onclick="fun6()">change the background of all nodes with class as cls</button>
     
     <script>
         var node = document.getElementById("d1");
@@ -71,6 +72,13 @@
             var nodes = document.getElementsByClassName("fruit");
             for(var i = 0 ; i<nodes.length ; i++){
                 nodes[i].style.background = "gray";
+            }
+        }
+
+        function fun6(){
+            var nodes = document.getElementsByClassName("cls");
+            for(var i=0 ; i<nodes.length ; i++){
+                nodes[i].style.background = "yellow";
             }
         }
     </script>
