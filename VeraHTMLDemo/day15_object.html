@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //introduction for array
+        var x = 10;         //number
+        var y = 3.14;       //number
+        var z = 'hello';    //string
+
+        var a = 12;
+        var b = 23;
+        var c = 34;
+        var d = 45;
+        var arr = [12,23,34,45,56,67,78,89,90];
+        console.log("a normal variable b = "+b);
+        console.log("get a number out of array, it has same value as b, which is "+ arr[1]);
+
+        console.log("see other elements in array:");
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+        console.log(arr[3]);
+        console.log(arr)
+
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+
+        //introduction for object
+        var o1 = {
+            no:1,
+            name:"Jack",
+            age:17,
+            gender:"male"
+        };
+        var o2 = {
+            no:2,
+            name:"Alice",
+            age:18,
+            gender:"female"
+        };
+        var o3 = {
+            no:3,
+            name:"Lucy",
+            age:17,
+            gender:"female"
+        };
+        var o4 = {
+            no:4,
+            name:"John",
+            age:18,
+            gender:"male"
+        };
+        var o5 = {
+            no:5,
+            name:"Tom",
+            age:19,
+            gender:"male"
+        };
+
+        var stuArr = [o1,o2,o3,o4,o5];
+        for(var i=0 ; i<stuArr.length ; i++){
+            // console.log(stuArr[i]);
+            console.log("I'm "+stuArr[i].name+",my number is "+stuArr[i].no +", I'm "+stuArr[i].age+
+                " years old, and I'm "+stuArr[i].gender
+            );
+        }
+        // console.log(o1);
+        // console.log(o1.name);
+        // console.log(o1.gender);
+    </script>
+</body>
+</html>
