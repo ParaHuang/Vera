@@ -1,0 +1,42 @@
+/*css:cascading style sheet*/
+/* transition: property1 duration1, property2 duration2, property3 duration3; */
+/* transition: all duration; */
+div{
+    width: 100px;
+    height: 100px;
+    background: pink;
+    transition: all 3s;
+}
+
+/*transfrom property: set up the transformation of an element
+translate: move the element along the x and y axis
+scale: scale the element in the x and y axis
+rotate: rotate the element around a specified point
+skew: skew the element along the x and y axis
+*/
+#d1:hover{
+    /* transform: translate(200px,100px); */
+    transform: translateX(200px);
+    background: lightpink;
+}
+
+#d2:hover{
+    /* transform: scale(0.5,3); */
+    transform: scaleX(0.5);
+    transform-origin: left top;
+    background: lightblue;
+}
+
+#d3:hover{
+    transform: rotate(70deg);  
+    /* transform: rotateX(45deg); */
+    /* transform: rotateY(45deg); */
+    /* transform: rotateZ(45deg); */
+    background: lightgreen;
+}
+
+#d4:hover{
+    /* transform: skewY(20deg);     */
+    transform: skew(20deg,30deg);
+    background: lightcoral;
+}
