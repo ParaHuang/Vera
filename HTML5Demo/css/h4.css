@@ -1,0 +1,20 @@
+/*
+transition: transfer from 1 statement to the other
+animation: key frame animation
+*/
+/*define key frame animation*/
+@keyframes myAnimation {
+    0%{background: red;}
+    14%{background: orange;}
+    29%{background: yellow;}
+    43%{background: green;}
+    57%{background: blue;}
+    71%{background: cyan;}
+    85%{background: purple;}
+    100%{background: red;}
+}
+
+/*change the background color of this page: red->orage->yellow->green->blue->cyan->purple*/
+body{
+    animation: myAnimation 15s infinite;
+}

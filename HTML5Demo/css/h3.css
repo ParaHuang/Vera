@@ -1,0 +1,31 @@
+/* css code:using selector to select the element and then set the style
+tag selector is used to select the element by its tag name
+class selector is used to select the element by its class name
+id selector is used to select the element by its id name, it should be unique in the page
+*/
+body {
+    background-color: #00ffff;/*the word of a color, rgb stands for red green blue,hexadecimal*/
+}
+
+input{
+    color: red;
+    font-size: 32px;
+    width: 300px;
+    height: 50px;
+}
+
+/*1.define a class selector*/
+/*2.use the class selector in a tag by attribute class="hello"*/
+.hello{
+    background: yellow;
+    color:blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#myId{
+    color: pink;
+    background: cyan;
+    font-size: 34px;
+}
