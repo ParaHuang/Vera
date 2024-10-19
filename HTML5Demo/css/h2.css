@@ -18,13 +18,23 @@
     top: 0;bottom: 0;left: 0;right: 0;
 }
 
+/* define the animation of the clock */
+@keyframes rotating {
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
 #minute {
     width: 70px;
     height: 10px;
     background-color: lightcyan;
     position: absolute; /*absolute to set up the position of the clock being relative to the parent element*/
     left:15px;
-    top:10px
+    top:10px;
+    transform-origin: left;
+    /* use the animation to rotate the clock */
+    /*   animationName duration repeat speed-model*/
+    animation:rotating 20s infinite linear;
 }
 
 #second {
@@ -36,4 +46,5 @@
     top:10px;
     transform: rotate(60deg); 
     transform-origin: left;
+    animation: rotating 10s infinite linear;
 }
