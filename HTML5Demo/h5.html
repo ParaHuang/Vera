@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="can" width="800" height="800" style="border: 1px solid red;"></canvas>
+    <script>
+        //1.get the canvas object
+        var can = document.getElementById("can");
+
+        //2.get the context of canvas object
+        var ctx = can.getContext('2d');
+
+        //set up the color
+        ctx.strokeStyle = "green";
+
+        //3.draw stuff on it
+        //3.1 draw rectangle
+        ctx.strokeRect(10,10,200,100);
+
+        ctx.fillStyle = "pink"
+        //3.2 fill rectangle
+        ctx.fillRect(10,120,100,40);
+
+        ctx.fillStyle = 'purple';
+        ctx.fillRect(10,170,300,160);
+
+        ctx.fillStyle = 'gray';
+        ctx.fillRect(60,200,200,100);
+
+        // 3.3 draw a circle
+        //      x, y , radius   start     end
+        ctx.arc(60,400,50,       0,      2*Math.PI);
+        // ctx.stroke();
+        ctx.fill();
+        //360 degree = 2*pi
+
+        // 3.4 draw line
+        ctx.beginPath();    //make sure the previous actions has no effect on the current drawing action 
+        ctx.moveTo(700,700);
+        ctx.lineTo(600,600);
+        ctx.lineTo(700,500);
+        ctx.lineTo(600,400);
+        ctx.lineTo(700,300);
+        ctx.lineTo(600,200);
+        ctx.lineTo(700,100);
+        // ctx.closePath();    //connect start point with end point by a line 
+        // ctx.stroke();
+        ctx.fill();  //if the area is not closed, then it will close automatically
+
+        //3.5 draw text
+        ctx.font = '40px Apple Chancery';
+        // ctx.strokeText('hello',10,600);
+        ctx.fillText('hello',10,600);
+
+    </script>
+</body>
+</html>

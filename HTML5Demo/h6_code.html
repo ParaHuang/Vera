@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="can" width="100" height="40" style="border: 1px solid red;"></canvas>
+    <script>
+        //1.get the canvas object
+        var can = document.getElementById("can");
+
+        //2.get the context of canvas object
+        var ctx = can.getContext('2d');
+
+        //3.draw a text
+        ctx.font = '38px Trattatello'
+        ctx.fillText('Ha9m',10,30); //x,y: the left bottom point
+
+        //draw some lines and dots, to make code hard to distinguish
+
+    </script>
+</body>
+</html>
