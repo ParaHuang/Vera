@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <input id="content" placeholder="enter the code" style="width: 400px;height: 40px;font-size: 24px;" />
     <canvas id="can" width="100" height="40" style="border: 1px solid red;"></canvas>
+    <a href="javascript:generateCode()">refresh</a><br>
+    <button onclick="vertify()">vertify the code</button>
     <script>
+        var ary = ["Q", "W", "E", "R", "T", "Y", "U", "I",
+            "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M", "q", "w", "e",
+            "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v",
+            "b", "n", "m", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        var code;
         //1.get the canvas object
         var can = document.getElementById("can");
 
         //2.get the context of canvas object
         var ctx = can.getContext('2d');
 
-        //3.draw a text
-        ctx.font = '38px Trattatello'
-        ctx.fillText('Ha9m',10,30); //x,y: the left bottom point
+        function drawCode() {
+            //3.draw a text
+            ctx.font = '38px Trattatello'
+            ctx.fillStyle = "black"
+            code = "";
+            for (var i = 1; i <= 4; i++) {
+                var index = parseInt(Math.random() * 62); //0.00000001*62->0.00000000062≈0 ->  0.99999999*62->61.999998≈61
+                var c = ary[index];
+                code += c;
+            }
+            // round(0.6) = 1
+            // round(0.3) = 0
+            // parseInt(0.999999) = 0
+            // parseInt(0.3) = 0
+            ctx.fillText(code, 10, 30); //x,y: the left bottom point
+        }
 
-        //draw some lines and dots, to make code hard to distinguish
+        function drawLines() {
+            //draw some lines and dots, to make code hard to distinguish
+            //10 lines
+            ctx.strokeStyle = "brown";
+            for (var i = 1; i <= 6; i++) {
+                //from: x:0~20          y:0~40
+                //to:   x:80~100        y:0~40
+                //random number
+                // Math.random():0~1  *20   0.9*20 = 18  0.999999* 20    0.1*20 = 2   0.000001*20
+                var x1 = Math.random() * 20;
+                var y1 = Math.random() * 40;
+                var x2 = Math.random() * 20 + 80;
+                var y2 = Math.random() * 40;
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
+                ctx.stroke();
+            }
+        }
+
+        function drawDots(){
+            //20 dots
+            ctx.fillStyle = "cadetblue";
+            for (var i = 1; i <= 10; i++) {
+                ctx.beginPath();
+                var x = Math.random() * 80 + 10;//10~90
+                var y = Math.random() * 30 + 5;//5~35
+                ctx.arc(x, y, 3, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function generateCode(){
+            ctx.clearRect(0,0,100,40);
+            drawCode();
+            drawLines();
+            drawDots();
+        }
+
+        generateCode();
+
+        function vertify(){
+            var content = document.getElementById("content").value;
+            if(content.toUpperCase() == code.toUpperCase()){
+                alert("code is correct")
+            }else{
+                alert("try again")
+            }
+        }
 
     </script>
 </body>
+
 </html>
