@@ -7,6 +7,8 @@
 </head>
 <body>
     <canvas id="can" width="800" height="800" style="border: 1px solid red;"></canvas>
+
+    <img id="img" src="img/1.jpg" alt="">
     <script>
         //1.get the canvas object
         var can = document.getElementById("can");
@@ -48,8 +50,8 @@
         ctx.lineTo(600,200);
         ctx.lineTo(700,100);
         // ctx.closePath();    //connect start point with end point by a line 
-        // ctx.stroke();
-        ctx.fill();  //if the area is not closed, then it will close automatically
+        ctx.stroke();
+        // ctx.fill();  //if the area is not closed, then it will close automatically
 
         //3.5 draw text
         ctx.font = '40px Apple Chancery';

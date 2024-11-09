@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body><br><br><br><br><br><br><br>
+    <img id="pic" src="img/1.jpg"/>
+    <canvas id="can" width="500px" height="500px" style="border: 1px solid red;"></canvas>
+    <script>
+        var ctx = document.getElementById("can").getContext("2d");
+        var pic = document.getElementById("pic");
+        /*
+        pic.onload = function(){
+            //======1:draw with the original size,it won't show full picture if canvas is too small
+            //argument 1, the image you want to draw
+            //argument 2,3, draw at where 
+
+            //======2:draw from where, set up the width and height
+            //the image will fit into the canse
+            //argument 4,5, width, height
+            // ctx.drawImage(pic,20,20,460,460)
+
+            //======3:choose a part from the original picture, then draw it in canvas at a position , with a size
+            //arguments2~5:the choose you choose in original picture
+            //arguments6~9:the place you want to draw at
+            ctx.drawImage(pic,50,50,200,200,0,0,500,500);
+        }
+            */
+        pic.onmousemove = function(e){
+            ctx.clearRect(0,0,500,500) //clear the mark from last time
+            //depends on where your cursor is, draw the image around that cursor
+            // console.log(e.x,e.y)    //the coordinate in the page
+            console.log(e.offsetX,e.offsetY); //the coordinate in the cursor in this picture
+            ctx.drawImage(pic,e.offsetX-100,e.offsetY-100,200,200,0,0,500,500);
+        }
+    </script>
+</body>
+</html>
