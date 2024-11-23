@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 30px;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <p>for the path in svg, property d means draw</p>
+    <p>
+        svg path: lines<br>
+        command:<br>
+        M: moveTo,start point,
+        L: lineTo,
+        H: horizontal lineTo,
+        V: Vertical lineTo
+        Z: cloth path
+    </p>
+    <svg width="300" height="200">
+        <path d="M10,200 L75,0 L150,200 L225,0 L290,200 V100 H10 Z" stroke="red" stroke-width="5" fill="none"/>
+    </svg>
+
+    <p>
+        svg path: arc<br>
+        command:<br>
+        A rx ry xr laf sf x y<br>
+        rx,ry:radius of x and y<br>
+        xr: the rotate angle<br>
+        laf:do you want to choose the longer arc, 1:yes , 0:no<br>
+        sf:do you want to draw it clockwise, 1:yes , 0:no<br>
+        x,y: x,y of the end point 
+    </p>
+    <svg width="300" height="200">
+        <path d="M40,150 A 100 50 0 1 1 250,50" stroke="red" stroke-width="5" fill="none"/>
+    </svg>
+
+    <p>svg path: Quadratic bezier curve</p>
+    <p>svg path: cubic bezier curve</p>
+
+</body>
+</html>
