@@ -1,4 +1,4 @@
-
+package day1;
 public class Main1 {
 	//args:arguments
 	public static void main(String[] args) {//the entrance of your program
