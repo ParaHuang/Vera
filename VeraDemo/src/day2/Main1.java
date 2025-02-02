@@ -7,8 +7,9 @@ public class Main1 {
 		// math operators: + - * / %
 		// relational operators: >   >=    <   <=    ==   !=  (the result is true/false)
 		// logical operator:  ! (not)    && (and)     || (or)
+		// assignment operator: =  +=   -=   *=   /=   %=
 
-		//priority：  math>relational>logical
+		//priority：  math>relational>logical>assignment
 		
 		// defines 2 variables, represent the width and height of a rectangle
 		// calculate the perimeter and the area
